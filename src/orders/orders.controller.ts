@@ -43,7 +43,7 @@ export class OrdersController {
       const orders = await firstValueFrom(
         this.natsClient.send('findAllOrders', orderPaginationDto),
       );
-      console.log(orders);
+      return orders;
     } catch (error) {
       throw new RpcException(error);
     }
