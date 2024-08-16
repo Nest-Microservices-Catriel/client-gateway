@@ -1,14 +1,23 @@
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
+
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
+
 ## Cliente Gateway
 
-El gateway es el punto de comunicación entre nuestros clientes y nuestros servicios. Es el encargado de recibir las peticiones, enviarlas a los servicios correspondientes y devolver la respuesta al cliente.
+### Description
+
+The gateway is the communication point between our customers and our services. It is in charge of receiving requests, sending them to the corresponding services and returning the response to the client.
 
 ## Dev
 
-1. Clonar el repositorio
-2. Instalar dependencias
-3. Crear un archivo `.env` basado en el `env.template`
-4. Tener levantados los microservicios que se van a consumir
-   5.Levantar servidor de NATS
+1. Clone the repository
+2. Install dependencies
+3. Create an `.env` based on the `.env.template`
+4. To have the microservices that are going to be consumed up.
+5. Raise NATS server
 
 ```
 docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
@@ -17,3 +26,13 @@ docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
 6. Levantar proyecto con `npm run start:dev`
 
 ## Nats
+
+## Installation Prod
+
+1. Clone the repository
+2. Create an `.env` based on the `.env.template`
+3. Execute command `docker build -f dockerfile.prod -t "name" .`
+
+## Stay in touch
+
+- LinkedIn - [Catriel Escobar](https://www.linkedin.com/in/catrielescobar/)
